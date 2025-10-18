@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Serif CJK TC", "Microsoft JhengHei", serif;
+}
+
+body {
+    background-color: #f9f5f0;
+    color: #3a2c1f;
+    line-height: 2;
+    padding: 0;
+    max-width: 100%;
+}
+
+.header {
+    background-color: #8c2c2c;
+    color: #fff;
+    padding: 2em 1em;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.title {
+    font-size: 2.8em;
+    margin-bottom: 0.3em;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3em 2em;
+}
+
+.book-cover {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.book-cover img {
+    max-width: 350px;
+    border: 10px solid #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.book-cover img:hover {
+    transform: scale(1.03);
+}
+
+.story-chapter {
+    margin-bottom: 4em;
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.chapter-title {
+    font-size: 2em;
+    color: #8c2c2c;
+    margin-bottom: 1.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #d4b886;
+}
+
+.story-paragraph {
+    margin-bottom: 1.5em;
+    text-align: justify;
+    font-size: 1.1em;
+}
+
+.highlight {
+    color: #8c2c2c;
+    font-weight: bold;
+}
+
+/* 反派名言動畫樣式 */
+.villain-quote {
+    margin: 3em auto;
+    padding: 1.5em;
+    background-color: #fff3e6;
+    border-left: 6px solid #e67e22;
+    max-width: 800px;
+    position: relative;
+    animation: quoteAppear 1s ease-out;
+}
+
+.villain-name {
+    text-align: right;
+    margin-top: 1em;
+    color: #e67e22;
+    font-style: italic;
+    font-weight: bold;
+}
+
+@keyframes quoteAppear {
+    from {
+        opacity: 0;
+        left: -20px;
+    }
+    to {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+.offline-note {
+    text-align: center;
+    color: #6b5139;
+    font-size: 0.9em;
+    margin: 2em 0;
+    padding: 1em;
+    background-color: #fdf8f2;
+    border-radius: 4px;
+}
+
+/* 回到頂部按鈕 */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #8c2c2c;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+}
+
+.back-to-top:hover {
+    background-color: #6a1f1f;
+}
